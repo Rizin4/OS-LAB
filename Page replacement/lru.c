@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int p[20], f[20], fn, n, i, j, found, k, farthest, pos, fi;
+    int p[20], f[20], fn, n, i, j, found, k, farthest, pos, fi, fault = 0;
     printf("\n enter the no of pages:");
     scanf("%d", &n);
     printf("\n enter the page sequence:\n");
@@ -27,6 +27,7 @@ int main()
 
         if (found == 0) // miss
         {
+            fault++;
             for (j = 0; j < fn; j++) // inserting the page if empty space available
             {
                 if (f[j] == -1)
@@ -61,5 +62,6 @@ int main()
         for (j = 0; j < fn; j++)
             printf("%d\t", f[j]);
     }
+    printf("\n\nPage fault = %d", fault);
     return 0;
 }

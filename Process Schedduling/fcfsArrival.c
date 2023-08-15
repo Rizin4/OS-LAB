@@ -6,15 +6,24 @@ int main()
     float awt = 0.0, atat = 0.0;
     int pid[10], at[10], bt[10], wt[10], tat[10];
 
-    printf("Enter the number of processes:\n");
+    printf("Enter the number of processes: ");
     scanf("%d", &n);
 
-    printf("Enter the process id, arrival time, and burst time of processes:\n");
+    printf("\nEnter the process id: ");
     for (int i = 0; i < n; i++)
     {
-        scanf("%d %d %d", &pid[i], &at[i], &bt[i]);
+        scanf("%d", &pid[i]);
     }
-
+    printf("\nEnter arrival time: ");
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &at[i]);
+    }
+    printf("\nEnter burst time:\ ");
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &bt[i]);
+    }
     for (int i = 0; i < n; i++)
     {
         for (int j = i + 1; j < n; j++)
